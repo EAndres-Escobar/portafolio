@@ -1,0 +1,50 @@
+/*Estableciendo padding superior e inferior acorde al header*/
+.seccion-hobbies {
+    padding: 0;
+}
+
+/*Container con ancho y alto de 30px*/
+.seccion-hobbies__icono {
+    width: 2.3125rem;
+    height: 2.3125rem;
+}
+
+/*Selectores flag para iconos*/
+.seccion-hobbies__icono--cine {
+    background: url("../assets/aficiones/cine.png") center / 100% 100% no-repeat;
+}
+
+.seccion-hobbies__icono--futbol{
+    background: url("../assets/aficiones/futbol.png") center / 100% 100% no-repeat;
+}
+
+.seccion-hobbies__icono--lectura{
+    background: url("../assets/aficiones/lectura.png") center / 100% 100% no-repeat;
+}
+
+.seccion-hobbies__icono--series {
+    background: url("../assets/aficiones/series.png") center / 100% 100% no-repeat;
+}
+
+
+/*Texto con ancho completo, fuente en negritas y margen superior
+de 8px*/
+.seccion-hobbies__parrafo {
+    font-weight: 700;
+    margin: 0.5em 0 0 0;
+    width: 100%;
+}
+
+/*Tablets y celulares grandes u horizontales*/
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .seccion-hobbies {
+        padding: 0;
+    }
+}
+
+/*Celulares verticales*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .seccion-hobbies {
+        padding: 0;
+    }
+}

@@ -1,0 +1,156 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  */
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex; /* Usamos flexbox para alinear elementos horizontalmente */
+    flex-direction: column; /* Inicialmente, la cabecera tiene una columna */
+    align-items: center; /* Alinea elementos al centro inicialmente */
+    padding: 1rem; /* Espaciado alrededor de la cabecera */
+    background-color: var(--color-de-fondo-menu);
+}
+
+/* Ajuste para el logo */
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo para el título de la cabecera */
+.cabecera__titulo {
+    font-size: 1.2rem; /* Tamaño de fuente del título */
+    text-align: right; /* Alineación inicial a la derecha */
+}
+
+/* Estilo para los enlaces de navegación */
+.navegacion__elemento a {
+    font-size: 0.9rem; /* Tamaño de fuente para los enlaces de navegación */
+}
+
+/* Efecto hover para la lista de navegación */
+.navegacion__lista a:hover {
+    color: aqua;
+}
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 1024px) {
+    .cabecera {
+        flex-direction: row; /* Cambia a fila para pantallas grandes */
+        justify-content: flex-start; /* Justifica a la izquierda */
+        align-items: center; /* Alinea verticalmente los elementos */
+        gap: 1rem; /* Espacio entre los elementos */
+    }
+
+    .cabecera__logo {
+        max-width: 80px; /* Tamaño máximo para el logo */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .cabecera__titulo {
+        font-size: 1.2rem; /* Tamaño del título */
+        margin-left: 0; /* Sin margen a la izquierda */
+        margin-right: 8rem; /* Margen a la derecha */
+    }
+
+    .navegacion__lista {
+        display: flex; /* Mostrar lista de navegación */
+        flex-direction: row; /* En fila */
+        gap: 2rem; /* Espacio entre elementos */
+        margin-top: 0; /* Sin margen superior */
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem; /* Tamaño de fuente para enlaces de navegación */
+    }
+}
+
+/* Pantallas más pequeñas (hasta 1023px) */
+@media (max-width: 1023px) {
+    .cabecera {
+        flex-direction: row; /* Cambia a fila */
+        justify-content: space-between; /* Espacio entre título y contacto */
+        align-items: center; /* Alinea verticalmente los elementos */
+        width: 100%; /* Ocupa el ancho completo */
+        padding: 0 20px; /* Espaciado lateral */
+    }
+
+    .cabecera__titulo {
+        font-size: 1rem; /* Tamaño de fuente del título */
+        text-align: left; /* Alinea el título a la izquierda */
+        flex-grow: 1; /* Ocupa el espacio restante */
+        margin-right: 10px; /* Espacio entre el título y el contacto */
+    }
+
+    .navegacion__elemento_contacto {
+        margin-left: auto; /* Empuja el contacto a la derecha */
+        text-align: right; /* Alinea el texto a la derecha */
+        font-size: 1rem;
+    }
+
+    .cabecera__logo {
+        max-width: 50px; /* Oculta el logo en pantallas pequeñas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-right: 1rem;
+    }
+
+    .navegacion__elemento a {
+        display: none; /* Oculta otros enlaces de navegación */
+    }
+}
+
+/* Pantallas aún más pequeñas (hasta 720px) */
+@media (max-width: 720px) {
+    .cabecera {
+        display: flex; /* Asegura que siga siendo flexbox */
+        justify-content: space-between; /* Justifica el espacio entre elementos */
+        align-items: center; /* Alinea verticalmente los elementos */
+        padding: 0 10px; /* Espaciado lateral reducido */
+    }
+
+    .cabecera__titulo {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+        text-align: left; /* Alinea el título a la izquierda */
+        flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+        margin-right: 10px; /* Espacio entre el título y el contacto */
+    }
+
+    .navegacion__elemento_contacto {
+        margin-left: auto; 
+        text-align: right;
+        font-size: 0.8rem; 
+    }
+
+    .cabecera__logo {
+        max-width: 40px; /* Oculta el logo */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-right: 0.2em;
+    }
+
+    .navegacion__elemento a {
+        display: none; /* Oculta otros enlaces de navegación */
+    }
+}
